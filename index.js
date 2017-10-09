@@ -21,5 +21,5 @@ module.exports = options => {
 };
 
 if (require.main === module) {
-  module.exports(require(path.resolve(process.env.cwd(), 'flavorsOptions.js'))).run();
+  module.exports(require(path.resolve(process.env.cwd, 'flavorsOptions.js'))).run();
 }
