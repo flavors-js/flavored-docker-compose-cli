@@ -1,0 +1,49 @@
+{
+  "name": "flavored-docker-compose-cli",
+  "version": "0.0.0-development",
+  "description": "Run docker-compose with environment set up by Flavors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/index.js",
+    "lint": "eslint *.js test/**/*.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": "flavors-js/flavored-docker-compose-cli",
+  "keywords": [
+    "node.js",
+    "docker",
+    "docker-compose",
+    "configuration",
+    "management",
+    "config",
+    "resolver",
+    "CLI"
+  ],
+  "author": {
+    "name": "Michael Ledin",
+    "email": "michael@ledin.me",
+    "url": "https://github.com/mxl"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "files": [
+    "index.js"
+  ],
+  "bin": {
+    "flavored-docker-compose": "./index.js"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flavors-js/flavored-docker-compose-cli/issues"
+  },
+  "homepage": "https://github.com/flavors-js/flavored-docker-compose-cli#readme",
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "flavored-docker-compose": "^2.1.1",
+    "flavors-runner": "^3.1.0",
+    "mocha": "^4.0.1",
+    "semantic-release": "^8.0.3",
+    "semantic-release-cli": "^3.2.0"
+  }
+}
