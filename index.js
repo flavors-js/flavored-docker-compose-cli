@@ -11,12 +11,12 @@ const commonOptions = {
   }
 };
 
-module.exports = options => {
-  options = Object.assign({}, commonOptions, options);
+module.exports = configOptions => {
+  const options = Object.assign({}, commonOptions, configOptions);
   const plugin = require('flavors-runner/pluginLoader')(options);
   return {
     config: plugin.config,
-    run: () => require('flavors-runner/pluginRunner')(plugin, options)
+    run: runOptions => require('flavors-runner/pluginRunner')(plugin, Object.assign({}, options, runOptions))
   };
 };
 
